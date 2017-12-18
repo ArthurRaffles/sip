@@ -10,7 +10,7 @@ import { HomeContainer } from './containers/home-container/index';
 import { CssModulesContainer } from './containers/css-modules-container/index';
 import NotFoundContainer from './containers/not-found/index';
 import CurrencyConverterContainer from './containers/currency-converter-container/index';
-import TicketContainer from './containers/ticket-container/index';
+import TicketsContainer from './containers/tickets-container/index';
 
 import { store } from './store/index';
 
@@ -27,7 +27,7 @@ function App() {
         <Route component={MainLayout}>
           <Route path="/" component={HomeContainer} />
           <Route path="/currency-converter" component={CurrencyConverterContainer} />
-          <Route path="/tickets" component={TicketContainer} />
+          <Route path="/tickets" component={TicketsContainer} />
           <Route path="/css-modules" component={CssModulesContainer} />
           <Route path="*" component={NotFoundContainer} />
         </Route>

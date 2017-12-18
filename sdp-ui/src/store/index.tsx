@@ -12,19 +12,22 @@ import {
 import { epics as currencyConverterEpics } from './currency-converter/epics';
 import { default as spotRatesReducer, SpotRateState } from './spot-rates/reducer';
 import { spotRatesEpics } from './spot-rates/epics';
+import { default as ticketsReducer, TicketsState } from './tickets/reducer';
 
 export type RootState = {
   routing: any;
   currencyRates: CurrencyRatesState;
   currencyConverter: CurrencyConverterState;
-  spotRates: SpotRateState
+  spotRates: SpotRateState,
+  tickets: TicketsState
 };
 
 const rootReducer = combineReducers<RootState>({
   routing: routerReducer,
   currencyRates: currencyRatesReducer,
   currencyConverter: currencyConverterReducer,
-  spotRates: spotRatesReducer
+  spotRates: spotRatesReducer,
+  tickets: ticketsReducer
 });
 
 // rehydrating state on app start: implement here...
@@ -40,9 +43,9 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 export const store = createStore(
   rootReducer,
   recoverState(),
-  composeEnhancers(applyMiddleware(epicMiddleware)),
-   
+  composeEnhancers(applyMiddleware(epicMiddleware))
 );
+
 export type Store = { getState: () => RootState, dispatch: Function };
 
 // systemjs-hot-reloader hook, rehydrating the state of redux store

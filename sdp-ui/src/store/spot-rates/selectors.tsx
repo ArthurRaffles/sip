@@ -1,10 +1,9 @@
-import { createSelector } from 'reselect';
 import { RootState } from '../index';
+import { TickerPrice } from './reducer';
 
 const getSpotRates = (state: RootState) => state.spotRates;
 
-export const subscribePrice = createSelector(
-    getSpotRates, (rates) => {
-        return rates.prices.get('GBPUSD'); // obs needs to pick up from x
-  },
-);
+export const getSpotRate1 = (state: RootState) => {
+    const rates = getSpotRates(state);
+    return (symbol: string): TickerPrice => (rates[symbol] || ({ symbol, price: 0 }));
+};

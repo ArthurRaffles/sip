@@ -6,28 +6,23 @@ export type TickerPrice = {
     readonly price: number;
 };
 
-export type SpotRateState = {
-  readonly prices: Map<string, TickerPrice>;
+export interface SpotRateState {
+    [key: string]: TickerPrice;
 };
-
-export const initialState: SpotRateState = {
-  prices: new Map<string, TickerPrice>([['GBPUSD' , { symbol: 'GBPUSD', price: 2.2 }]])
-};
+export const initialState: SpotRateState = { };
 
 const handlePriceUpdate = (state: SpotRateState, action: any): SpotRateState => {
-    const { symbol, price } = action.payload;
-    console.log('reducer', action);
-    const prices  = state.prices.set(symbol, { symbol, price })
+    const { symbol } = action.payload;
     return {
         ...state,
-        prices: new Map(prices)
+        [symbol]: action.payload
     }
 };
 
 export default function reducer(state: SpotRateState = initialState, action: any): SpotRateState {
     switch(action.type) {
         case PriceActionCreators.PriceUpdate.type:
-        return handlePriceUpdate(state, action);
+            return handlePriceUpdate(state, action);
     }
     return state;
 }

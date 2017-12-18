@@ -1,49 +1,43 @@
 
 import * as React from 'react';
 import * as SpotRateSelectors from '../../store/spot-rates/selectors';
-import { TickerPrice } from '../../store/spot-rates/reducer';
 import { RootState } from '../../store/index';
-import { PageHeader } from '../../components/page-header';
-import { PageSection } from '../../components/page-section';
 import { connect } from 'react-redux';
 import { PriceActionCreators } from '../../store/spot-rates/actions';
+import { Ticket } from './components/ticket';
 
-const mapStateToProps = (state: RootState) => ({
-    spotRate: SpotRateSelectors.subscribePrice(state)
-  });
+const mapStateToProps = (state: RootState, ticket: any) => {
+    const { id, symbol } = ticket;
+    const { price } = SpotRateSelectors.getSpotRate1(state)(symbol);
+    return {
+        id,
+        symbol,
+        price,
+      };
+};
   
 const dispatchToProps = {
-    subscribeToPrice: PriceActionCreators.subscribeToPrice.create
+    subscribeToSpotRate: PriceActionCreators.subscribeToSpotRate.create
 };
 
 interface Props {
-    ticketId: string;
-    spotRate: TickerPrice;
-    subscribeToPrice: (symbol: string) => void;
+    id: string;
+    symbol: string;
+    price: number;
+    subscribeToSpotRate: (symbol: string) => void;
 }
 type State = {};
 class TicketContainer extends React.Component<Props, State> {
 
-    // handleSubscribe() {
-    //     const { subscribeToPrice } = this.props;
-    //     subscribeToPrice('GBPEUR');
-    // }
+    handleSubscribe = () => {
+        const { symbol, subscribeToSpotRate } = this.props;
+        subscribeToSpotRate(symbol);
+    }
+
     render() {
-        const { subscribeToPrice, spotRate: { symbol, price } } = this.props;
-    
-        const handleSubscribe = () => subscribeToPrice('GBPUSD')
-        return (
-          <article>
-            <PageHeader>FX Ticket</PageHeader>
-            <PageSection className="u-letter-box--xlarge">
-            
-                <div>{symbol}</div>
-                <div>{price}</div>
-                <button onClick={handleSubscribe} > subscribe </button>
-            </PageSection>
-          </article>
-        );
-      }
+        const props = { ...this.props, handleSubscribe: this.handleSubscribe}
+        return (<Ticket {...props} />);
+    }
 }
 
 export default connect(mapStateToProps, dispatchToProps)(TicketContainer);
