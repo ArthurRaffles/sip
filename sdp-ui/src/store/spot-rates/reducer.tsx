@@ -1,10 +1,11 @@
 
 import { PriceActionCreators } from './actions';
 
-export type TickerPrice = {
-    readonly symbol: string;
-    readonly price: number;
-    readonly lastPrice?: number;
+export interface TickerPrice {
+    symbol: string;
+    price: number;
+    lastPrice?: number;
+    priceChange?: number;
 };
 
 export interface SpotRateState {
@@ -14,12 +15,13 @@ export interface SpotRateState {
 export const initialState: SpotRateState = { };
 
 const handlePriceUpdate = (state: SpotRateState, action: any): SpotRateState => {
-    const { symbol } = action.payload;
+    const { symbol, price } = action.payload;
     const previous = state[symbol];
     const lastPrice = previous && previous.price;
+    const priceChange = price - Number(lastPrice);
     return {
         ...state,
-        [symbol]: { ...action.payload, lastPrice }
+        [symbol]: { ...action.payload, lastPrice, priceChange }
     }
 };
 

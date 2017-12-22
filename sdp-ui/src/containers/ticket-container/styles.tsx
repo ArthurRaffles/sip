@@ -1,0 +1,4 @@
+
+.ticket {
+    background: black;
+}

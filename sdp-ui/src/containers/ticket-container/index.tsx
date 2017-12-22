@@ -5,14 +5,14 @@ import { RootState } from '../../store/index';
 import { connect } from 'react-redux';
 import { PriceActionCreators } from '../../store/spot-rates/actions';
 import { Ticket } from './components/ticket';
+import { TickerPrice } from '../../store/spot-rates/reducer';
 
 const mapStateToProps = (state: RootState, ticket: any) => {
     const { id, symbol } = ticket;
-    const { price } = SpotRateSelectors.getSpotRate1(state)(symbol);
+    const rate : TickerPrice = SpotRateSelectors.getSpotRate1(state)(symbol);
     return {
-        id,
-        symbol,
-        price,
+        ...rate,
+        id
       };
 };
   
@@ -20,10 +20,8 @@ const dispatchToProps = {
     subscribeToSpotRate: PriceActionCreators.subscribeToSpotRate.create
 };
 
-interface Props {
+interface Props extends TickerPrice {
     id: string;
-    symbol: string;
-    price: number;
     subscribeToSpotRate: (symbol: string) => void;
 }
 type State = {};

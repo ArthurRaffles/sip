@@ -1,10 +1,4 @@
-/*@value colors '../../../../assets/palette.css';*/
-/*@value component-background-color from colors;*/
- @value basic-component from '../../../styles/components.css';
 
-/*.ticket {*/
-  /*composes: basic-component from '../../../styles/components.css'*/
-/*}*/
 .ticket {
   background-color: #333333;
   color: lightgray;
@@ -20,8 +14,8 @@
 }
 
 .price-tile {
-  height: 80px;
-  width: 80px;
+  height: 120px;
+  width: 120px;
   display: flex;
 
   font-size: 16px;
@@ -30,7 +24,8 @@
   align-items: center;
   border: 0;
   margin: 5px;
-  border-radius: 2px;
+  border-radius: 4px;
+  color: whitesmoke;
 }
 .price-title {
   text-transform: uppercase;
@@ -39,20 +34,23 @@
 
 .buy {
   background-color: #444444;
-  color: rgba(12,113,10,0.85);
 }
 .buy:hover {
-  color: rgba(12,113,10,0.98);
+  color: green;
   background-color: #121212;
   font-weight: 700;
 }
 .sell {
   background-color: #444444;
-  color: rgba(144,1,9,0.85);
 }
 .sell:hover {
-  color: rgba(144,1,9,0.98);
+  color: red;
   background-color: #121212;
   font-weight: 700;
-
+}
+.change-up {
+  color: rgba(12,113,10,1);
+}
+.change-down {
+  color:  rgba(144,1,9,1);
 }

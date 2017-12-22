@@ -34,9 +34,13 @@
     "deploy": "git checkout gh-pages && cd dist && git add --all && git commit -m \"New Release\" && git push"
   },
   "dependencies": {
+    "@types/react-bootstrap": "^0.31.8",
     "@types/react-icons": "^2.2.4",
     "@types/redux-logger": "^3.0.5",
     "classnames": "^2.2.5",
+    "react": "^16.2.0",
+    "react-bootstrap": "^0.31.5",
+    "react-dom": "^16.2.0",
     "react-icons": "^2.2.7"
   },
   "devDependencies": {

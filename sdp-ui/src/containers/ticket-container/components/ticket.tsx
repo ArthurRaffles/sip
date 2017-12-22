@@ -2,19 +2,18 @@ import * as React from 'react';
 
 import './component.css';
 import { PriceTile, Props as TileProps } from "./price-tile";
-export interface Props {
+import { TickerPrice } from '../../../store/spot-rates/reducer';
+export interface Props extends TickerPrice {
     id: string;
-    symbol: string;
-    price: number;
     handleSubscribe: () => void;
 }
 
 export const Ticket = (props: Props) => {
-    const { id, symbol, price , handleSubscribe } = props;
+    const { id, symbol, price , priceChange, handleSubscribe } = props;
     const buyClick = () => console.log('buy');
-    const sellClick = () => console.log('buy');
-    const buy: TileProps = { price, direction: 'buy', handleClick: buyClick };
-    const sell: TileProps = { price, direction: 'sell', handleClick: sellClick };
+    const sellClick = () => console.log('sell');
+    const buy: TileProps = { price, priceChange, direction: 'buy', handleClick: buyClick };
+    const sell: TileProps = { price, priceChange, direction: 'sell', handleClick: sellClick };
     return (
         <div className='ticket'>
             <div>FX Ticket {id}</div>
