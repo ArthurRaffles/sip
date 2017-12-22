@@ -10,7 +10,6 @@ SystemJS.config({
   devConfig: {
     "map": {
       "plugin-typescript": "github:frankwallis/plugin-typescript@5.3.3",
-      "css": "github:systemjs/plugin-css@0.1.33",
       "systemjs-hot-reloader": "github:alexisvincent/systemjs-hot-reloader@0.6.0"
     },
     "packages": {
@@ -71,6 +70,9 @@ SystemJS.config({
         },
         "*.ts": {
           "loader": "plugin-typescript"
+        },
+        "*.css": {
+          "loader": "css"
         }
       }
     }
@@ -91,6 +93,7 @@ SystemJS.config({
     "constants": "npm:jspm-nodelibs-constants@0.2.0",
     "crypto": "npm:jspm-nodelibs-crypto@0.2.0",
     "csjs": "npm:csjs@1.1.0",
+    "css": "github:systemjs/plugin-css@0.1.36",
     "domain": "npm:jspm-nodelibs-domain@0.2.0",
     "events": "npm:jspm-nodelibs-events@0.2.0",
     "fs": "npm:jspm-nodelibs-fs@0.2.0",

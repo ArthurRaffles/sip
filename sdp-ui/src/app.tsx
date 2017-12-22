@@ -13,6 +13,7 @@ import CurrencyConverterContainer from './containers/currency-converter-containe
 import TicketsContainer from './containers/tickets-container/index';
 
 import { store } from './store/index';
+import './styles/components.css';
 
 // switch between browser history or hash history
 import { browserHistory } from 'react-router';

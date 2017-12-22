@@ -1,0 +1,9 @@
+
+.tickets-container {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  background-color: #333333;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}

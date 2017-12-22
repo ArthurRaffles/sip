@@ -34,7 +34,10 @@
     "deploy": "git checkout gh-pages && cd dist && git add --all && git commit -m \"New Release\" && git push"
   },
   "dependencies": {
-    "@types/redux-logger": "^3.0.5"
+    "@types/react-icons": "^2.2.4",
+    "@types/redux-logger": "^3.0.5",
+    "classnames": "^2.2.5",
+    "react-icons": "^2.2.7"
   },
   "devDependencies": {
     "@types/redux-logger": "^3.0.5",
@@ -72,6 +75,7 @@
     "dependencies": {
       "classnames": "npm:classnames@^2.2.5",
       "csjs": "npm:csjs@^1.1.0",
+      "css": "github:systemjs/plugin-css@^0.1.36",
       "insert-css": "npm:insert-css@^1.1.0",
       "react-dom": "npm:react-dom@^15.4.2",
       "react-redux": "npm:react-redux@^5.0.3",
@@ -84,7 +88,6 @@
       "whatwg-fetch": "npm:whatwg-fetch@^1.1.1"
     },
     "devDependencies": {
-      "css": "github:systemjs/plugin-css@^0.1.33",
       "plugin-typescript": "github:frankwallis/plugin-typescript@^5.3.3",
       "systemjs-hot-reloader": "github:alexisvincent/systemjs-hot-reloader@^0.6.0"
     },

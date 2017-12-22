@@ -1,0 +1,58 @@
+/*@value colors '../../../../assets/palette.css';*/
+/*@value component-background-color from colors;*/
+ @value basic-component from '../../../styles/components.css';
+
+/*.ticket {*/
+  /*composes: basic-component from '../../../styles/components.css'*/
+/*}*/
+.ticket {
+  background-color: #333333;
+  color: lightgray;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 200px;
+}
+
+.ticket-prices {
+  display: flex;
+  flex-direction: row;
+}
+
+.price-tile {
+  height: 80px;
+  width: 80px;
+  display: flex;
+
+  font-size: 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  margin: 5px;
+  border-radius: 2px;
+}
+.price-title {
+  text-transform: uppercase;
+  color: #999999
+}
+
+.buy {
+  background-color: #444444;
+  color: rgba(12,113,10,0.85);
+}
+.buy:hover {
+  color: rgba(12,113,10,0.98);
+  background-color: #121212;
+  font-weight: 700;
+}
+.sell {
+  background-color: #444444;
+  color: rgba(144,1,9,0.85);
+}
+.sell:hover {
+  color: rgba(144,1,9,0.98);
+  background-color: #121212;
+  font-weight: 700;
+
+}
