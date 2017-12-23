@@ -5,7 +5,7 @@ import { Store } from '../index';
 // import { ActionCreators, Action } from './reducer';
 import rx from 'rxjs';
 import { PriceActionCreators } from './actions';
-
+import { SocketActionCreators } from '../sockets/actions';
 // const socket$ = rx.Observable.webSocket<any>(
 //     "ws://thewebsocketurl"
 //   );
@@ -13,13 +13,13 @@ import { PriceActionCreators } from './actions';
 let priceWebsocket: WebSocket = new WebSocket("ws://localhost:8999");
   
 const connectPriceEpic = (action$: any, store: Store) =>
-    action$.ofType(PriceActionCreators.connectToPriceServer.type)
+    action$.ofType(SocketActionCreators.connect.type)
         .mergeMap( (action: any) => {
             if (!priceWebsocket || priceWebsocket.CLOSED) {
                 let ob = rx.Observable.create(
                     (obs: rx.Observer<any>) => {
                         priceWebsocket.onopen = (ev: Event) => {
-                            obs.next(PriceActionCreators.priceServerStatus.create('CONNECTED'));
+                            obs.next(SocketActionCreators.statusChange.create('CONNECTED'));
                         }
                         priceWebsocket = new WebSocket("ws://localhost:8999");                        
                         return priceWebsocket.close.bind(priceWebsocket);
@@ -28,15 +28,15 @@ const connectPriceEpic = (action$: any, store: Store) =>
                 return ob;
             }
             if (priceWebsocket.OPEN) {
-                return rx.Observable.of(PriceActionCreators.priceServerStatus.create('CONNECTED'));
+                return rx.Observable.of(SocketActionCreators.statusChange.create('CONNECTED'));
             } else if(priceWebsocket.CONNECTING) {
-                return rx.Observable.of(PriceActionCreators.priceServerStatus.create('CONNECTING'));
+                return rx.Observable.of(SocketActionCreators.statusChange.create('CONNECTING'));
             }
 
         });
 
 const subscribePriceEpic = (action$: any, store: Store) =>
-    action$.ofType('SUBSCRIBE_PRICE')
+    action$.ofType(PriceActionCreators.subscribeToPriceUpdate.type)
         .mergeMap( (action: any) => {
             const { payload } = action;
             console.log('create obs');
@@ -49,7 +49,7 @@ const subscribePriceEpic = (action$: any, store: Store) =>
                 }
             )
             .map((me: MessageEvent) => JSON.parse(me.data))
-            .map(({ ticker, price } : any) => PriceActionCreators.PriceUpdate.create({ symbol : ticker, price }));
+            .map(({ ticker, bid, ask } : any) => PriceActionCreators.priceUpdate.create({ symbol : ticker, bid, ask }));
             console.log('ws send');
             priceWebsocket.send(payload);
             return ob;

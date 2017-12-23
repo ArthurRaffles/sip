@@ -23,9 +23,11 @@ wss.on('connection', (ws: WebSocket) => {
 
         setInterval(() => {
             if (connected) {
+                const price = Math.random();
                 ws.send(JSON.stringify( {
                     ticker,
-                    price: (Math.random() *100).toFixed(4),
+                    bid: (price *102).toFixed(4),
+                    ask: (price *100).toFixed(4),
                     timestamp: Date.now
                 }));
             }

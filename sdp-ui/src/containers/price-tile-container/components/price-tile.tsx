@@ -6,13 +6,15 @@ import { PriceChange } from './price-change';
 
 export interface Props {
   price: number;
+  priceChange: number;
   direction: Direction;
-  priceChange?: number;
   handleClick: () => void;
 }
 
 export const PriceTile = (props: Props) => {
-  const { price, direction, priceChange = 0, handleClick } = props;
+  const { price, priceChange, direction, handleClick } = props;
+  // const priceChange = 
+
   const tileClass = cx('price-tile', direction );
   return (
     <div className={tileClass} onClick={handleClick}>
