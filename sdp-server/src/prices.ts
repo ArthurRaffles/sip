@@ -10,8 +10,8 @@ const server = http.createServer(app);
 //initialize the WebSocket server instance
 const wss = new WebSocket.Server({ server });
 
-
 wss.on('connection', (ws: WebSocket) => {
+    let subscribedTickers: {[type: string]: boolean} = {};
 
     let connected = true;
     //connection is up, let's add a simple simple event
@@ -21,22 +21,31 @@ wss.on('connection', (ws: WebSocket) => {
         console.log('received: %s', ticker);
        //  ws.send(`Hello, you sent -> ${ticker}`);
 
-        setInterval(() => {
-            if (connected) {
-                const price = Math.random();
-                ws.send(JSON.stringify( {
-                    ticker,
-                    bid: (price *102).toFixed(4),
-                    ask: (price *100).toFixed(4),
-                    timestamp: Date.now
-                }));
-            }
+        if ( !subscribedTickers[ticker]) {
+            console.log('new subscription: %s', ticker);
+            const baseValue = Math.random() * 10;
+            setInterval(() => {
+                if (connected) {
+                    const price = baseValue  + (0.5 - Math.random());
+                    const payload = JSON.stringify( {
+                        ticker,
+                        bid: (price *11).toFixed(4),
+                        ask: (price *12).toFixed(4),
+                        timestamp: Date.now
+                    });
+                    console.log('sending', payload);
+                    ws.send(payload);
+                }
+    
+            }, 2000);
+            subscribedTickers[ticker] = true;
+        }
 
-        }, 1000);
     });
 
     ws.on('close', (code: number, reason: string)=>{
         connected = false;
+        subscribedTickers = {}
         console.log('closing..');
     });
     //send immediatly a feedback to the incoming connection    

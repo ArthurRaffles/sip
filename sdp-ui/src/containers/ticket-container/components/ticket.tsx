@@ -2,28 +2,29 @@ import * as React from 'react';
 
 import './component.css';
 import PriceTileContainer, { Props as TileProps } from "../../price-tile-container/index";
-import { TickerPrice } from '../../../store/spot-rates/reducer';
-export interface Props extends TickerPrice {
+import TenorSelectorContainer from '../../tenor-selector-container/index';
+
+export interface Props {
     id: string;
     symbol: string;
-    handleSubscribe: () => void;
+    buy: TileProps;
+    sell: TileProps;
+    notional: number;
+    tenor: string;
+
+    // tenorChanged: (tenor: string) => void;
 }
 
 export const Ticket = (props: Props) => {
-    const { id, symbol, handleSubscribe } = props;
-    const buyClick = () => console.log('buy');
-    const sellClick = () => console.log('sell');
-    const buy: TileProps = { symbol, direction: 'buy', priceType: 'bid', price: 0, priceChange: 0, handleClick: buyClick };
-    const sell: TileProps = { symbol, direction: 'sell', priceType: 'ask', price: 0, priceChange: 0, handleClick: sellClick };
-    return (
+    const { id, symbol, buy, sell } = props;
+     return (
         <div className='ticket'>
-            <div>FX Ticket {id}</div>
-            <div>{symbol}</div>
+            <div>{symbol} - {id}</div>
             <div className='ticket-prices' >
               <PriceTileContainer {...buy} />
               <PriceTileContainer {...sell} />
             </div>
-            <button onClick={handleSubscribe} > subscribe </button>
+            <TenorSelectorContainer ticketId={id} />
         </div>
     );
 };

@@ -1,41 +1,56 @@
 
 import * as React from 'react';
-// import * as SpotRateSelectors from '../../store/spot-rates/selectors';
+
 import { RootState } from '../../store/index';
 import { connect } from 'react-redux';
 import { PriceActionCreators } from '../../store/spot-rates/actions';
 import { Ticket } from './components/ticket';
-import { TickerPrice } from '../../store/spot-rates/reducer';
+import { Props as TileProps } from "../price-tile-container/index";
+import { PriceAccepted } from '../../definitions';
+import { getTenors } from '../../store/static/selectors';
 
-const mapStateToProps = (state: RootState, ticket: any) => {
-    const { id, symbol } = ticket;
-    // const rate : TickerPrice = SpotRateSelectors.getSpotRate1(state)(symbol);
+const mapStateToProps = (state: RootState, ownProps: any) => {
+    const tenors = getTenors(state);
     return {
-        symbol,
-        id
-      };
+        tenors
+    }
 };
   
 const dispatchToProps = {
     subscribeToSpotRate: PriceActionCreators.subscribeToPriceUpdate.create
 };
 
-interface Props extends TickerPrice {
+interface Props {
     id: string;
     symbol: string;
+    tenors: string[];
     subscribeToSpotRate: (symbol: string) => void;
 }
 type State = {};
 class TicketContainer extends React.Component<Props, State> {
 
-    handleSubscribe = () => {
+    componentDidMount() {
         const { symbol, subscribeToSpotRate } = this.props;
         subscribeToSpotRate(symbol);
     }
 
+    defaultTicketProps() {
+        const { symbol } = this.props;
+        const buyClick = (accepted: PriceAccepted) => console.log(accepted);
+        const sellClick = (accepted: PriceAccepted) => console.log(accepted);
+        const buy: TileProps = { symbol, direction: 'buy', priceType: 'bid', onClick: buyClick };
+        const sell: TileProps = { symbol, direction: 'sell', priceType: 'ask', onClick: sellClick };
+        return {
+            buy, sell, notional: 1000, tenor: 'SPOT'
+        }
+    }
+
     render() {
-        const props = { ...this.props, handleSubscribe: this.handleSubscribe}
-        return (<Ticket {...props} />);
+        const ticketProps = {
+            ...this.defaultTicketProps(),
+            ...this.props
+        }
+        return (<Ticket {...ticketProps} />);
     }
 }
 

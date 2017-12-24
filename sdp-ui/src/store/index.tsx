@@ -13,13 +13,15 @@ import { epics as currencyConverterEpics } from './currency-converter/epics';
 import { default as spotRatesReducer, SpotRateState } from './spot-rates/reducer';
 import { spotRatesEpics } from './spot-rates/epics';
 import { default as ticketsReducer, TicketsState } from './tickets/reducer';
+import { default as staticReducer, StaticDataState } from './static/reducer';
 
 export type RootState = {
   routing: any;
   currencyRates: CurrencyRatesState;
   currencyConverter: CurrencyConverterState;
   spotRates: SpotRateState,
-  tickets: TicketsState
+  tickets: TicketsState,
+  static: StaticDataState
 };
 
 const rootReducer = combineReducers<RootState>({
@@ -27,7 +29,8 @@ const rootReducer = combineReducers<RootState>({
   currencyRates: currencyRatesReducer,
   currencyConverter: currencyConverterReducer,
   spotRates: spotRatesReducer,
-  tickets: ticketsReducer
+  tickets: ticketsReducer,
+  static: staticReducer
 });
 
 // rehydrating state on app start: implement here...

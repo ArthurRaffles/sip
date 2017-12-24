@@ -3,15 +3,15 @@ import './component.css';
 import cx from 'classnames';
 
 export interface Props {
-  priceChange: number | 0;
+  priceChange?: number;
 }
 
 export const PriceChange = (props: Props) => {
-  const { priceChange } = props;
+  const { priceChange = 0 } = props;
 
-  const changeClass = cx('fa', {
-    'fa-arrow-up change-up': priceChange > 0,
-    'fa-arrow-down change-down': priceChange < 0
+  const changeClass = cx({
+    'fa fa-arrow-up change-up': priceChange >= 0,
+    'fa fa-arrow-down change-down': priceChange < 0
   } );
   return (
     <i className={changeClass}></i>

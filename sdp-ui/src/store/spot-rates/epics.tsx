@@ -2,14 +2,10 @@ import { combineEpics } from 'redux-observable';
 import 'rxjs/add/operator/map';
 
 import { Store } from '../index';
-// import { ActionCreators, Action } from './reducer';
 import rx from 'rxjs';
 import { PriceActionCreators } from './actions';
 import { SocketActionCreators } from '../sockets/actions';
-// const socket$ = rx.Observable.webSocket<any>(
-//     "ws://thewebsocketurl"
-//   );
-  
+
 let priceWebsocket: WebSocket = new WebSocket("ws://localhost:8999");
   
 const connectPriceEpic = (action$: any, store: Store) =>
@@ -49,7 +45,8 @@ const subscribePriceEpic = (action$: any, store: Store) =>
                 }
             )
             .map((me: MessageEvent) => JSON.parse(me.data))
-            .map(({ ticker, bid, ask } : any) => PriceActionCreators.priceUpdate.create({ symbol : ticker, bid, ask }));
+            // .do((obj: any) => console.warn('recieved', obj))
+            .map(({ ticker, bid, ask } : any) => PriceActionCreators.priceUpdate.create({ symbol : ticker, bid: Number(bid), ask: Number(ask) }));
             console.log('ws send');
             priceWebsocket.send(payload);
             return ob;

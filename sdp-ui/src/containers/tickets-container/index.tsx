@@ -5,7 +5,7 @@ import { RootState } from '../../store/index';
 import { connect } from 'react-redux';
 import { Ticket } from '../../store/tickets/reducer';
 import { TicketActionCreators } from '../../store/tickets/actions';
-import {Tickets} from "./components/tickets";
+import { Tickets } from "./components/tickets";
 
 const mapStateToProps = (state: RootState) => ({
     tickets: TicketsSelectors.getTickets(state)

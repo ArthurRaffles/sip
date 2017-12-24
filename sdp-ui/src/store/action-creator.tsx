@@ -1,4 +1,10 @@
-export class ActionCreator<T, P> {
+import { Action } from 'redux';
+
+export interface GenericAction<T> extends Action{
+  payload: T
+}
+
+export class ActionCreator<T, P> implements GenericAction<P>{
   readonly type: T;
   readonly payload: P;
 

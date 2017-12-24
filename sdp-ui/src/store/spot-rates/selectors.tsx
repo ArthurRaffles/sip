@@ -1,8 +1,8 @@
 import { RootState } from '../index';
-import { SpotRate } from './reducer';
+import { SpotRate, SpotRateState } from './reducer';
 import { PriceItem, PriceType } from '../../definitions';
 
-const getSpotRates = (state: RootState) => state.spotRates;
+const getSpotRates = (state: RootState): SpotRateState => state.spotRates;
 
 export const getSpotRate1 = (state: RootState) => {
     const rates = getSpotRates(state);
@@ -17,11 +17,13 @@ export const getPrice = (state: RootState) => {
             case 'bid':
                 return {
                     price: price.price.bid,
+                    previousPrice: price.previous.bid,
                     priceChange: price.price.bid - price.previous.bid
                 }
             case 'ask':
                 return {
                     price: price.price.ask,
+                    previousPrice: price.previous.ask,
                     priceChange: price.price.ask - price.previous.ask
                 }
         }
