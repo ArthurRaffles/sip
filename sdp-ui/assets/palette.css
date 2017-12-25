@@ -1,6 +1,13 @@
 
-/*@value component-background-color: #333333;*/
-
-.component {
-  background-color: green;
+:root{
+  --container-background-color: #444444;
+  --component-background-color: #333333;
+  --component-background-color-dark: #222222;
+  --hover-color: #121212;
+  --buy-color: green;
+  --sell-color:  red;
+  --up-color: rgba(12,113,10,1);
+  --down-color: rgba(144,1,9,1);
+  --text-color-standard: whitesmoke;
+  --text-color-subtle:  #999999;
 }

@@ -1,8 +1,10 @@
+@import '../../../../assets/palette.css';
+@import '../../../../assets/variables.css';
 
 .tickets-container {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  background-color: #333333;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-standard);
+  background-color: var(--container-background-color);
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;

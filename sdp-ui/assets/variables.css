@@ -1,0 +1,11 @@
+
+:root{
+    --ticket-height: 300px;
+    --ticket-width: 200px;
+    --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-weight-standard: 500;
+    --font-weight-heavy: 700;
+    --font-size-title-small: 16px;
+    --global-component-margin: 5px;
+    --control-border-radius: 4px;
+  }

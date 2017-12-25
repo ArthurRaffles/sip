@@ -9,17 +9,13 @@ export interface Props {
     symbol: string;
     buy: TileProps;
     sell: TileProps;
-    notional: number;
-    tenor: string;
-
-    // tenorChanged: (tenor: string) => void;
 }
 
 export const Ticket = (props: Props) => {
     const { id, symbol, buy, sell } = props;
      return (
         <div className='ticket'>
-            <div>{symbol} - {id}</div>
+            <div className='ticket-title'>{symbol} - {id}</div>
             <div className='ticket-prices' >
               <PriceTileContainer {...buy} />
               <PriceTileContainer {...sell} />

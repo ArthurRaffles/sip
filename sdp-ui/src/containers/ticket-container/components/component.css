@@ -1,14 +1,30 @@
-
+@import '../../../../assets/palette.css';
+@import '../../../../assets/variables.css';
 .ticket {
-  background-color: #333333;
-  color: lightgray;
+  background-color: var(--component-background-color);
+  color: var(--text-color-subtle);
   display: flex;
   flex-direction: column;
-  height: 300px;
-  width: 200px;
+  height: var(--ticket-height);
+  width: var(--ticket-width);
+  margin: var(--global-component-margin);
 }
-
+.ticket-title {
+  margin: var(--global-component-margin);
+  font-size: var(--font-size-title-small);
+}
+.ticket:hover {
+  background-color: var(--hover-color);
+  color: var(--text-color-standard);
+}
 .ticket-prices {
   display: flex;
   flex-direction: row;
+}
+select {
+  background-color: var(--component-background-color-dark);
+  color: var(--text-color-subtle);
+  margin: var(--global-component-margin);
+  border: 0;
+  border-radius: var(--control-border-radius);
 }

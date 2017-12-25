@@ -41,11 +41,12 @@ class TicketContainer extends React.Component<Props, State> {
         const buy: TileProps = { symbol, direction: 'buy', priceType: 'bid', onClick: buyClick };
         const sell: TileProps = { symbol, direction: 'sell', priceType: 'ask', onClick: sellClick };
         return {
-            buy, sell, notional: 1000, tenor: 'SPOT'
+            buy, sell
         }
     }
 
     render() {
+        console.warn('rendering ticket', this.props);
         const ticketProps = {
             ...this.defaultTicketProps(),
             ...this.props

@@ -1,42 +1,42 @@
+@import '../../../../assets/palette.css';
+
 .price-tile {
-    height: 120px;
+    height: 80px;
     width: 120px;
     display: flex;
   
-    font-size: 16px;
+    font-size: var(--font-size-title-small);
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 0;
-    margin: 5px;
-    border-radius: 4px;
-    color: whitesmoke;
+    margin: var(--global-component-margin);
+    border-radius: var(--control-border-radius);
+    color: var(--text-color-standard);
+    background-color: var(--component-background-color-dark);
   }
   
   .price-title {
     text-transform: uppercase;
-    color: #999999
+    color: var(--text-color-subtle);
   }
 
-.buy {
-    background-color: #444444;
-  }
   .buy:hover {
-    color: green;
-    background-color: #121212;
-    font-weight: 700;
+    color: var(--buy-color);
+    background-color: var(--hover-color);
+    font-weight: var(--font-weight-heavy);
+    cursor: pointer;
   }
-  .sell {
-    background-color: #444444;
-  }
+
   .sell:hover {
-    color: red;
-    background-color: #121212;
-    font-weight: 700;
+    color: var(--sell-color);
+    background-color: var(--hover-color);
+    font-weight: var(--font-weight-heavy);
+    cursor: pointer;
   }
   .change-up {
-    color: rgba(12,113,10,1);
+    color: var(--up-color);
   }
   .change-down {
-    color:  rgba(144,1,9,1);
+    color:  var(--down-color);
   }
