@@ -1,11 +1,13 @@
 
 import { TicketActionCreators } from './actions';
 import { GenericAction } from '../action-creator';
+import createReducer, { Reducers } from '../../utils/reducer.utils';
 
 export interface Ticket {
     id: string;
     symbol: string;
     tenor?: string;
+    notional?: number;
 };
 
 export interface TicketUpdatePayload {
@@ -13,42 +15,45 @@ export interface TicketUpdatePayload {
     field: string;
     value: any;
 }
-export type TicketsState = Array<Ticket>;
-const initialState: TicketsState = []
-
+export interface TicketsState {
+    [key: string]: Ticket
+};
+const initialState: TicketsState = {};
 let ticketCounter = 0;
-const handleAddTicket = (state: TicketsState, action: any): TicketsState => {
-    const symbol = action.payload; 
-    return [...state, { id: `t${ticketCounter++}`, symbol }]
-};
 
-const handleRemoveTicket = (state: TicketsState, action: any): TicketsState => {
-    const { id } = action.payload;
-    const idx = state.findIndex((ticket: Ticket) => ticket.symbol === id);
-    return [...state.slice(0, idx), ...state.slice(idx + 1)]
-};
-
-const handleUpdateTicket = (state: TicketsState, action: GenericAction<TicketUpdatePayload>): TicketsState => {
-    const { id, field, value } = action.payload;
-    return state.map((ticket: Ticket) => {
-        if (ticket.id === id){
-            return {
-                ...ticket,
-                [field]: value
-            }
+const reducers: Reducers<TicketsState> = {
+    [TicketActionCreators.addTicket.type]: (state: TicketsState, action: GenericAction<string>): TicketsState => {
+        const symbol = action.payload;
+        const id = `t${ticketCounter++}`;
+        return {
+            ...state,
+            [id]: { id, symbol }
         }
-        return ticket;
-    })
-};
-
-export default function reducer(state: TicketsState = initialState, action: any): TicketsState {
-    switch(action.type) {
-        case TicketActionCreators.addTicket.type:
-            return handleAddTicket(state, action);
-        case TicketActionCreators.removeTicket.type:
-            return handleRemoveTicket(state, action);
-        case TicketActionCreators.updateTicket.type:
-            return handleUpdateTicket(state, action);
-    }
-    return state;
+        //return [...state, { id: `t${ticketCounter++}`, symbol }]
+    },
+    
+    [TicketActionCreators.removeTicket.type]: (state: TicketsState, action: GenericAction<string>): TicketsState => {
+        const id = action.payload;
+        return Object.keys(state)
+            .filter((key: string) => key !== id)
+            .reduce((acc: any, key: string)=> acc[key] = state[key], {});
+        // const idx = state.findIndex((ticket: Ticket) => ticket.id === id);
+        // return (idx > -1)
+        //     ? [...state.slice(0, idx), ...state.slice(idx + 1)]
+        //     : state;
+    },
+    
+    [TicketActionCreators.updateTicket.type]: (state: TicketsState, action: GenericAction<TicketUpdatePayload>): TicketsState => {
+        const { id, field, value } = action.payload;
+        const newTicket = {
+            ...state[id],
+            [field]: value
+        };
+        return {
+            ...state,
+            [id]: newTicket
+        };
+    }   
 }
+
+export default createReducer<TicketsState>(reducers, initialState);

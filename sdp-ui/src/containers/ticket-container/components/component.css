@@ -1,5 +1,6 @@
 @import '../../../../assets/palette.css';
 @import '../../../../assets/variables.css';
+
 .ticket {
   background-color: var(--component-background-color);
   color: var(--text-color-subtle);
@@ -9,22 +10,46 @@
   width: var(--ticket-width);
   margin: var(--global-component-margin);
 }
+
 .ticket-title {
   margin: var(--global-component-margin);
   font-size: var(--font-size-title-small);
 }
+
 .ticket:hover {
+  display: flex;
+  flex-direction: column;
   background-color: var(--hover-color);
   color: var(--text-color-standard);
 }
+
+.close {
+  align-self: flex-end;
+  color: var(--text-color-subtle);
+}
+
+.close:hover {
+  color: var(--text-color-standard);
+}
+
 .ticket-prices {
   display: flex;
   flex-direction: row;
 }
+
 select {
   background-color: var(--component-background-color-dark);
   color: var(--text-color-subtle);
   margin: var(--global-component-margin);
   border: 0;
   border-radius: var(--control-border-radius);
+}
+
+input {
+  background-color: var(--component-background-color-dark);
+  color: var(--text-color-subtle);
+  border: 0;
+  margin: var(--global-component-margin);
+  border-radius: var(--control-border-radius);
+  padding-left: 8px;
 }

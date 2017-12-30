@@ -1,6 +1,6 @@
 import { Action } from 'redux';
 
-export interface GenericAction<T> extends Action{
+export interface GenericAction<T> extends Action {
   payload: T
 }
 
