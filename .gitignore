@@ -18,6 +18,7 @@ src/**/*.map
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 sdp-server/node_modules
 sdp-ui/node_modules
+server-api/node_modules
 
 # Build directory
 dist

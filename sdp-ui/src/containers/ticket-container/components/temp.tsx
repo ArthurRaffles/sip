@@ -28,20 +28,23 @@ import { DebugComponent } from '../../../components/debug-component';
         adsManager: NativeAd;
     }
     interface IProps  {
-      myProp: number;
-      nativeAd: NativeAd;
+      counter: number;
   }
   interface State {
 
   }
-  class AdComponent extends React.Component<IWithAd, {}> {
+  class AdComponent extends React.Component<IProps, {}> {
       
-      // public render() {
-      //     return (
-      //         <div>
-      //         </div>
-      //     );
-      // }
+    componentWillReceiveProps(nextProps: any) {
+      console.log('props current', this.props);
+      console.log('props about to be', nextProps);
+    }
+      public render() {
+          return (
+              <div>
+              </div>
+          );
+      }
   }
   export const withNativeAd1 = <TProps, TState>(WrappedComponent: React.ComponentClass<IWithAd> ): React.ComponentClass<IWithAd>  => {
     return class extends React.Component<IWithAd, TState> {
