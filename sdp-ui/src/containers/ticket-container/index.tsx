@@ -25,7 +25,7 @@ const dispatchToProps = {
     updateTicket: TicketActionCreators.updateTicket.create
 };
 
-interface Props {
+export interface Props {
     id: string;
     symbol: string;
     notional: number;
@@ -39,6 +39,11 @@ class TicketContainer extends React.Component<Props, State> {
     componentDidMount() {
         const { symbol, subscribeToSpotRate } = this.props;
         subscribeToSpotRate(symbol);
+    }
+
+    componentWillReceiveProps(nextProps: any) {
+        console.log('props current', this.props);
+        console.log('props about to be', nextProps);
     }
 
     handleRemove = (event: React.MouseEvent<HTMLInputElement>) => {
@@ -66,7 +71,6 @@ class TicketContainer extends React.Component<Props, State> {
     }
 
     render() {
-        console.warn('rendering ticket', this.props);
         const ticketProps = {
             ...this.defaultTicketProps(),
             ...this.props,

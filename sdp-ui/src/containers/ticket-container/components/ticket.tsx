@@ -3,6 +3,7 @@ import * as React from 'react';
 import './component.css';
 import PriceTileContainer, { Props as TileProps } from "../../price-tile-container/index";
 import TenorSelectorContainer from '../../tenor-selector-container/index';
+import { MonetaryInput } from '../../../components/monentary-input';
 
 export interface Props {
     id: string;
@@ -17,11 +18,12 @@ export interface Props {
 const notionalClick = (event: React.MouseEvent<HTMLInputElement>) => {
     event.currentTarget.select();
     event.preventDefault();
-}
+};
+
 export const Ticket = (props: Props) => {
     const { id, symbol, buy, sell, notional, onRemoveClick, onNotionalChanged } = props;
      return (
-        <div className='ticket'>
+        <form className='ticket'>
             <div className='ticket-title'>
                 <span>{symbol} - {id}</span>
                 <i className='fa fa-close close' onClick={onRemoveClick}></i>
@@ -31,7 +33,7 @@ export const Ticket = (props: Props) => {
               <PriceTileContainer {...sell} />
             </div>
             <TenorSelectorContainer ticketId={id} />
-            <input type="number" value={notional} onChange={onNotionalChanged} onClick={notionalClick}/>
-        </div>
+            <MonetaryInput value={notional} onChanged={onNotionalChanged} />
+        </form>
     );
 };

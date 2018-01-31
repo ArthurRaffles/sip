@@ -29,7 +29,7 @@ class TicketsContainer extends React.Component<Props, State> {
 
     render() {
         const { tickets } = this.props;
-        const ticketList = Object.keys(tickets).map((id: string) => tickets[id])
+        const ticketList: Ticket[] = Object.values(tickets);
         return (
               <div>
                 <button onClick={this.handleAddTicket('GBPUSD')} > Add GBPUSD </button>

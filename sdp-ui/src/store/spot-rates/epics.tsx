@@ -35,7 +35,7 @@ const subscribePriceEpic = (action$: any, store: Store) =>
     action$.ofType(PriceActionCreators.subscribeToPriceUpdate.type)
         .mergeMap( (action: any) => {
             const { payload } = action;
-            console.log('create obs');
+            // console.log('create obs');
             let ob = rx.Observable.create(
                 (obs: rx.Observer<MessageEvent>) => {
                     priceWebsocket.onmessage = obs.next.bind(obs);
@@ -47,7 +47,7 @@ const subscribePriceEpic = (action$: any, store: Store) =>
             .map((me: MessageEvent) => JSON.parse(me.data))
             // .do((obj: any) => console.warn('recieved', obj))
             .map(({ ticker, bid, ask } : any) => PriceActionCreators.priceUpdate.create({ symbol : ticker, bid: Number(bid), ask: Number(ask) }));
-            console.log('ws send');
+            // console.log('ws send');
             priceWebsocket.send(payload);
             return ob;
         });
