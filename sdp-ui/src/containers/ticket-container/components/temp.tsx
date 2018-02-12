@@ -2,43 +2,27 @@
 import React, { Component, PropTypes } from 'react'
 import { DebugComponent } from '../../../components/debug-component';
 
-// import { Component } from 'react';
-
-    export class NativeAdsManager {
-        constructor(placementId: string, numberOfAdsToRequest: number){
-
-        }
-    }
-
-    export interface NativeAd {
-        icon?: string;
-        coverImage?: string;
-        title?: string;
-        subtitle?: string;
-        decription?: string;
-        callToActionText?: string;
-        socialContext?: string;
-    }
-
-    interface IWithAd {
-        nativeAd: NativeAd;
-    }
-
-    interface IWithManger {
-        adsManager: NativeAd;
-    }
     interface IProps  {
       counter: number;
   }
-  interface State {
+
+  interface MarkerProps {
+    position: {
+      lat: number, long: number
+    },
+    onClick: (object: any) => void;
 
   }
-  class AdComponent extends React.Component<IProps, {}> {
-      
-    componentWillReceiveProps(nextProps: any) {
-      console.log('props current', this.props);
-      console.log('props about to be', nextProps);
+  class Marker extends React.Component<MarkerProps, {} > {
+    render() {
+      const { onClick } = this.props;
+      return (
+        <div onClick={onClick} />
+      )
     }
+  }
+  class MyComponent extends React.Component<IProps, {}> {
+      
       public render() {
           return (
               <div>
@@ -46,27 +30,4 @@ import { DebugComponent } from '../../../components/debug-component';
           );
       }
   }
-  export const withNativeAd1 = <TProps, TState>(WrappedComponent: React.ComponentClass<IWithAd> ): React.ComponentClass<IWithAd>  => {
-    return class extends React.Component<IWithAd, TState> {
-        render() {
-            return (
-                <WrappedComponent {...this.props} />
-            )
-        }
-    }
-}
-    export function withNativeAd<T, S>(comp: Component<IWithAd, S>): any {
-      return class extends React.Component<IWithAd, S> {
-        // componentWillMount(){
-        //     console.warn('mounting', WrappedComponent.displayName);
-        // }
-        render() {
-            // console.warn('rendering', WrappedComponent.displayName, this.props);
-            return (
-                <div/>
-            )
-        }
-    }
-    }
-
-    const f =  withNativeAd1( AdComponent);
+  

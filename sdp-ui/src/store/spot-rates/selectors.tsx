@@ -2,7 +2,7 @@ import { RootState } from '../index';
 import { SpotRate, SpotRateState } from './reducer';
 import { PriceItem, PriceType } from '../../definitions';
 
-const getSpotRates = (state: RootState): SpotRateState => state.spotRates;
+const   getSpotRates = (state: RootState): SpotRateState => state.spotRates;
 
 export const getSpotRate1 = (state: RootState) => {
     const rates = getSpotRates(state);

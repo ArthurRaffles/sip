@@ -14,6 +14,7 @@ import { default as spotRatesReducer, SpotRateState } from './spot-rates/reducer
 import { spotRatesEpics } from './spot-rates/epics';
 import { default as ticketsReducer, TicketsState } from './tickets/reducer';
 import { default as staticReducer, StaticDataState } from './static/reducer';
+import { fetchMiddleware } from './middleware/fetch.middleware';
 
 export type RootState = {
   routing: any;
@@ -46,7 +47,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 export const store = createStore(
   rootReducer,
   recoverState(),
-  composeEnhancers(applyMiddleware(epicMiddleware))
+  composeEnhancers(applyMiddleware(epicMiddleware, fetchMiddleware))
 );
 
 export type Store = { getState: () => RootState, dispatch: Function };

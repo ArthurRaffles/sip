@@ -3,7 +3,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
 const http = require("http");
 const WebSocket = require("ws");
+const instruments = require('./instruments');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const multer = require('multer'); // v1.0.5
+const upload = multer(); // for parsing multipart/form-data
 const app = express();
+app.use(cors());
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+app.use('/instruments', instruments);
 //initialize a simple http server
 const server = http.createServer(app);
 //initialize the WebSocket server instance
@@ -41,7 +50,7 @@ wss.on('connection', (ws) => {
         console.log('closing..');
     });
     //send immediatly a feedback to the incoming connection    
-    ws.send('Hi there, I am a WebSocket server');
+    // ws.send('Hi there, I am a WebSocket server');
 });
 //start our server
 server.listen(process.env.PORT || 8999, () => {

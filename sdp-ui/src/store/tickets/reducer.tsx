@@ -2,6 +2,7 @@
 import { TicketActionCreators } from './actions';
 import { GenericAction } from '../action-creator';
 import createReducer, { Reducers } from '../../utils/reducer.utils';
+import { ticketsUtils } from './utils';
 
 export interface Ticket {
     id: string;
@@ -19,12 +20,10 @@ export interface TicketsState {
     [key: string]: Ticket
 };
 const initialState: TicketsState = {};
-let ticketCounter = 0;
-
 const reducers: Reducers<TicketsState> = {
     [TicketActionCreators.addTicket.type]: (state: TicketsState, action: GenericAction<string>): TicketsState => {
         const symbol = action.payload;
-        const id = `t${ticketCounter++}`;
+        const id = `t${ticketsUtils.nextId()}`; //  `t${ticketCounter++}`;
         return {
             ...state,
             [id]: { id, symbol }

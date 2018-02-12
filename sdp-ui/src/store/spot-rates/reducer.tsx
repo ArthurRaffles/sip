@@ -20,7 +20,9 @@ export const initialState: SpotRateState = { };
 const handlePriceUpdate = (state: SpotRateState, action: any): SpotRateState => {
     const { symbol, bid, ask } = action.payload;
     const lastRate: SpotRate = state[symbol];
-    const previous = lastRate && lastRate.price ? { ...lastRate.price } : { symbol, bid: 0 , ask: 0};
+    const previous = lastRate && lastRate.price
+        ? { ...lastRate.price }
+        : { bid: 0 , ask: 0};
     const newTickerPrice: SpotRate = {
         price: { bid, ask },
         previous
