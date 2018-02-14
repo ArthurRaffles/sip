@@ -1,6 +1,3 @@
-import { Action } from 'redux';
-// import { Middleware, MiddlewareAPI } from 'redux';
-import { RootState } from '../index';
 import { GenericAction} from '../action-creator';
 import { httpApi } from './http.api';
 
@@ -10,24 +7,63 @@ export enum FetchMode {
 }
 export interface FetchPayload {
     url: string;
+    responseType: string;
+    errorType: string;
     mode: FetchMode;
 }
 export const BASE_URL = 'http://localhost:8999';
 const CALL_API = 'CALL_API';
 export class FetchAction<P extends FetchPayload> implements GenericAction<P> {
-    readonly responseType: string;
     readonly type: string;
     readonly payload: P;
     readonly CALL_API: string = CALL_API;
-    constructor(type: string, responseType: string, payload: P) {
-        this.responseType = responseType; 
-        this.type = type; 
-        this.payload = payload; 
+    constructor(type: string, payload: P) {
+        this.type = type;
+        this.payload = payload;
     }
 }
+
 export const fetchMiddleware = (store: any) =>
-        (next: any) => (action: Action) => {
-            const shouldCall: any = action.CALL_API
-    console.log('fetch mw', action);
-    return next(action);
-}
+        (next: any) => (action: any) => {
+            const act = (action as FetchAction<FetchPayload>);
+            const shouldCall: boolean = !!(action as FetchAction<FetchPayload>).CALL_API;
+            console.log('fetch mw', action, shouldCall);
+
+            if (shouldCall) {
+              console.warn('calling ... ', next);
+              const { url, mode, responseType, errorType } = act.payload;
+
+              httpApi.fetch(`${BASE_URL}\/${url}`, {
+                  method: mode === FetchMode.POST ? 'POST': 'GET'
+              })
+                .then((response: any) => {
+                 // console.warn('response 1', response);
+
+                  const foo  = response.json();
+                  console.warn('foo 1', foo);
+
+                  // foo.then(d=> console.warn('foo 2', d));
+
+                  return foo;
+                  // return response.json();
+              }).then((data: any) => {
+                  console.warn('DATA RECEIVED', data);
+                  const newAction = {
+                    type: responseType,
+                    data
+                  };
+                  next(newAction);
+                })
+                .catch((error: any) => {
+                  const newAction = {
+                    type: errorType,
+                    error
+                  };
+                  next(newAction);
+                })
+            } else {
+              return next(action);
+            }
+
+
+};

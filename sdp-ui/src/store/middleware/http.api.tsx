@@ -1,4 +1,5 @@
 
 export const httpApi = {
-    fetch: () => fetch
-}
+    fetch: (input: RequestInfo, init?: RequestInit) => fetch(input, init)
+};
+

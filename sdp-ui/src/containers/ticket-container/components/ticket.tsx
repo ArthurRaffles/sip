@@ -15,10 +15,10 @@ export interface Props {
     onNotionalChanged: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const notionalClick = (event: React.MouseEvent<HTMLInputElement>) => {
-    event.currentTarget.select();
-    event.preventDefault();
-};
+// const notionalClick = (event: React.MouseEvent<HTMLInputElement>) => {
+//     event.currentTarget.select();
+//     event.preventDefault();
+// };
 
 export const Ticket = (props: Props) => {
     const { id, symbol, buy, sell, notional, onRemoveClick, onNotionalChanged } = props;

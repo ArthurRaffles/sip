@@ -25,7 +25,7 @@ export interface Props {
     direction: Direction;
 }
 type State = {};
-class PriceTileContainer extends React.Component<Props & PriceItem, State> {
+export class PriceTileContainer extends React.Component<Props & PriceItem, State> {
 
     handleClick = () => {
         const { price, priceType, onClick } = this.props;
