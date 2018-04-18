@@ -11,6 +11,7 @@ export interface FetchPayload {
     errorType: string;
     mode: FetchMode;
 }
+
 export const BASE_URL = 'http://localhost:8999';
 const CALL_API = 'CALL_API';
 export class FetchAction<P extends FetchPayload> implements GenericAction<P> {
@@ -36,17 +37,8 @@ export const fetchMiddleware = (store: any) =>
               httpApi.fetch(`${BASE_URL}\/${url}`, {
                   method: mode === FetchMode.POST ? 'POST': 'GET'
               })
-                .then((response: any) => {
-                 // console.warn('response 1', response);
-
-                  const foo  = response.json();
-                  console.warn('foo 1', foo);
-
-                  // foo.then(d=> console.warn('foo 2', d));
-
-                  return foo;
-                  // return response.json();
-              }).then((data: any) => {
+                .then((response: any) => response.json())
+                .then((data: any) => {
                   console.warn('DATA RECEIVED', data);
                   const newAction = {
                     type: responseType,

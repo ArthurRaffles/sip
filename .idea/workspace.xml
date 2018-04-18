@@ -70,24 +70,29 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-api/node_modules/node-notifier/vendor/terminal-notifier.app/Contents/MacOS/terminal-notifier" afterPath="$PROJECT_DIR$/server-api/node_modules/node-notifier/vendor/terminal-notifier.app/Contents/MacOS/terminal-notifier" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-api/node_modules/regjsparser/node_modules/.bin/jsesc" afterPath="$PROJECT_DIR$/server-api/node_modules/regjsparser/node_modules/.bin/jsesc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-api/node_modules/send/node_modules/.bin/mime" afterPath="$PROJECT_DIR$/server-api/node_modules/send/node_modules/.bin/mime" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sip.iml" afterPath="$PROJECT_DIR$/.idea/sip.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ric/src/api/instrumentService.js" afterPath="$PROJECT_DIR$/ric/src/api/instrumentService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdp-ui/.babelrc" afterPath="$PROJECT_DIR$/sdp-ui/.babelrc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdp-ui/assets/palette.css" afterPath="$PROJECT_DIR$/sdp-ui/assets/palette.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdp-ui/jest.json" afterPath="$PROJECT_DIR$/sdp-ui/jest.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdp-ui/package.json" afterPath="$PROJECT_DIR$/sdp-ui/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdp-ui/src/containers/price-tile-container/components/component.css" afterPath="$PROJECT_DIR$/sdp-ui/src/containers/price-tile-container/components/component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdp-ui/src/containers/price-tile-container/components/price-tile.notpec.tsx" afterPath="$PROJECT_DIR$/sdp-ui/src/containers/price-tile-container/components/price-tile.notpec.tsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdp-ui/src/containers/price-tile-container/components/price-tile.tsx" afterPath="$PROJECT_DIR$/sdp-ui/src/containers/price-tile-container/components/price-tile.tsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdp-ui/src/containers/price-tile-container/index.tsx" afterPath="$PROJECT_DIR$/sdp-ui/src/containers/price-tile-container/index.tsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdp-ui/src/containers/price-tile-container/price-tile-container.not.pec.tsx" afterPath="$PROJECT_DIR$/sdp-ui/src/containers/price-tile-container/price-tile-container.not.pec.tsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdp-ui/src/containers/ticket-container/components/component.css" afterPath="$PROJECT_DIR$/sdp-ui/src/containers/ticket-container/components/component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdp-ui/src/containers/ticket-container/components/ticket.tsx" afterPath="$PROJECT_DIR$/sdp-ui/src/containers/ticket-container/components/ticket.tsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdp-ui/src/containers/tickets-container/components/tickets.css" afterPath="$PROJECT_DIR$/sdp-ui/src/containers/tickets-container/components/tickets.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdp-ui/src/containers/tickets-container/components/tickets.tsx" afterPath="$PROJECT_DIR$/sdp-ui/src/containers/tickets-container/components/tickets.tsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdp-ui/src/containers/tickets-container/index.tsx" afterPath="$PROJECT_DIR$/sdp-ui/src/containers/tickets-container/index.tsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdp-ui/src/definitions.tsx" afterPath="$PROJECT_DIR$/sdp-ui/src/definitions.tsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdp-ui/src/store/index.tsx" afterPath="$PROJECT_DIR$/sdp-ui/src/store/index.tsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdp-ui/src/store/middleware/fetch.middleware.spec.tsx" afterPath="$PROJECT_DIR$/sdp-ui/src/store/middleware/fetch.middleware.spec.tsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdp-ui/src/store/middleware/fetch.middleware.tsx" afterPath="$PROJECT_DIR$/sdp-ui/src/store/middleware/fetch.middleware.tsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdp-ui/src/store/middleware/http.api.tsx" afterPath="$PROJECT_DIR$/sdp-ui/src/store/middleware/http.api.tsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdp-ui/src/store/spot-rates/actions.tsx" afterPath="$PROJECT_DIR$/sdp-ui/src/store/spot-rates/actions.tsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdp-ui/src/styles/components.css" afterPath="$PROJECT_DIR$/sdp-ui/src/styles/components.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-api/node_modules/acorn/bin/acorn" afterPath="$PROJECT_DIR$/server-api/node_modules/acorn/bin/acorn" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-api/node_modules/ajv/scripts/info" afterPath="$PROJECT_DIR$/server-api/node_modules/ajv/scripts/info" />
@@ -274,60 +279,70 @@
     <window id="1">
       <content type="file-editors">
         <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-            <file leaf-file-name="component.css" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/sdp-ui/src/containers/ticket-container/components/component.css">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="572">
-                    <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="epics.tsx" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/sdp-ui/src/store/spot-rates/epics.tsx">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="325">
-                    <caret line="28" column="51" lean-forward="false" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/sdp-ui/src/containers/price-tile-container/index.tsx">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="171">
-                    <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/sdp-ui/package.json">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="-245">
-                    <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="fetch.middleware.tsx" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/sdp-ui/src/store/middleware/fetch.middleware.tsx">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="629">
-                    <caret line="49" column="16" lean-forward="false" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
-                    <folding>
-                      <element signature="e#0#49#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
+          <splitter split-orientation="horizontal" split-proportion="0.5">
+            <split-first>
+              <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+                <file leaf-file-name="index.tsx" pinned="false" current-in-tab="true">
+                  <entry file="file://$PROJECT_DIR$/sdp-ui/src/containers/tickets-container/index.tsx">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state relative-caret-position="895">
+                        <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+                        <folding>
+                          <element signature="e#1#32#0" expanded="true" />
+                        </folding>
+                      </state>
+                    </provider>
+                  </entry>
+                </file>
+                <file leaf-file-name="reducer.tsx" pinned="false" current-in-tab="false">
+                  <entry file="file://$PROJECT_DIR$/sdp-ui/src/store/static/reducer.tsx">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state relative-caret-position="418">
+                        <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+                        <folding />
+                      </state>
+                    </provider>
+                  </entry>
+                </file>
+                <file leaf-file-name="index.d.ts" pinned="false" current-in-tab="false">
+                  <entry file="file://$PROJECT_DIR$/sdp-ui/node_modules/redux/index.d.ts">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state relative-caret-position="345">
+                        <caret line="301" column="16" lean-forward="false" selection-start-line="301" selection-start-column="16" selection-end-line="301" selection-end-column="16" />
+                        <folding />
+                      </state>
+                    </provider>
+                  </entry>
+                </file>
+                <file leaf-file-name="index.d.ts" pinned="false" current-in-tab="false">
+                  <entry file="file://$PROJECT_DIR$/sdp-ui/node_modules/redux-thunk/index.d.ts">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state relative-caret-position="0">
+                        <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                        <folding />
+                      </state>
+                    </provider>
+                  </entry>
+                </file>
+              </leaf>
+            </split-first>
+            <split-second>
+              <leaf>
+                <file leaf-file-name="fetch.middleware.tsx" pinned="false" current-in-tab="true">
+                  <entry file="file://$PROJECT_DIR$/sdp-ui/src/store/middleware/fetch.middleware.tsx">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state relative-caret-position="931">
+                        <caret line="49" column="32" lean-forward="false" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+                        <folding>
+                          <element signature="e#0#49#0" expanded="true" />
+                        </folding>
+                      </state>
+                    </provider>
+                  </entry>
+                </file>
+              </leaf>
+            </split-second>
+          </splitter>
         </state>
       </content>
     </window>
@@ -336,13 +351,25 @@
     <splitter split-orientation="horizontal" split-proportion="0.49663073">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="fetch.middleware.spec.tsx" pinned="false" current-in-tab="true">
+          <file leaf-file-name="fetch.middleware.spec.tsx" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sdp-ui/src/store/middleware/fetch.middleware.spec.tsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="33" column="42" lean-forward="false" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+                <state relative-caret-position="-133">
+                  <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#31#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="actions.tsx" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/sdp-ui/src/store/spot-rates/actions.tsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="114">
+                  <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+                  <folding>
+                    <element signature="e#0#50#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -352,7 +379,7 @@
             <entry file="file://$PROJECT_DIR$/ric/src/ricView/ricView.jsx">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="446">
-                  <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+                  <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -362,11 +389,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="instrumentService.test.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="instrumentService.test.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ric/src/api/instrumentService.test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-114">
-                  <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+                <state relative-caret-position="266">
+                  <caret line="38" column="31" lean-forward="false" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -384,11 +411,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="instrumentService.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="instrumentService.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ric/src/api/instrumentService.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="57">
-                  <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+                <state relative-caret-position="171">
+                  <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="app.tsx" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sdp-ui/src/app.tsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-19">
+                  <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
                   <folding />
                 </state>
               </provider>
@@ -408,6 +445,7 @@
       <find>bootstr</find>
       <find>subscribePriceEpic</find>
       <find>jest</find>
+      <find>.hot</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -420,7 +458,6 @@
         <option value="$PROJECT_DIR$/sdp-ui/jspm.config.js" />
         <option value="$PROJECT_DIR$/sdp-ui/src/styles/components.css" />
         <option value="$PROJECT_DIR$/sdp-ui/src/app.tsx" />
-        <option value="$PROJECT_DIR$/sdp-ui/src/containers/tickets-container/index.tsx" />
         <option value="$PROJECT_DIR$/sdp-ui/src/containers/tickets-container/components/tickets.tsx" />
         <option value="$PROJECT_DIR$/sdp-ui/src/definitions.tsx" />
         <option value="$PROJECT_DIR$/sdp-ui/src/containers/tickets-container/components/tickets.css" />
@@ -437,12 +474,16 @@
         <option value="$PROJECT_DIR$/sdp-ui/src/containers/price-tile-container/index.tsx" />
         <option value="$PROJECT_DIR$/sdp-ui/src/containers/price-tile-container/components/component.css" />
         <option value="$PROJECT_DIR$/sdp-ui/jest.json" />
-        <option value="$PROJECT_DIR$/sdp-ui/package.json" />
         <option value="$PROJECT_DIR$/sdp-ui/src/containers/price-tile-container/components/price-tile.spec.tsx" />
         <option value="$PROJECT_DIR$/sdp-ui/src/containers/price-tile-container/price-tile-container.spec.tsx" />
         <option value="$PROJECT_DIR$/sdp-ui/src/store/middleware/http.api.tsx" />
-        <option value="$PROJECT_DIR$/sdp-ui/src/store/middleware/fetch.middleware.tsx" />
+        <option value="$PROJECT_DIR$/ric/src/api/instrumentService.js" />
         <option value="$PROJECT_DIR$/sdp-ui/src/store/middleware/fetch.middleware.spec.tsx" />
+        <option value="$PROJECT_DIR$/sdp-ui/src/store/middleware/fetch.middleware.tsx" />
+        <option value="$PROJECT_DIR$/sdp-ui/src/containers/tickets-container/index.tsx" />
+        <option value="$PROJECT_DIR$/sdp-ui/package.json" />
+        <option value="$PROJECT_DIR$/sdp-ui/src/store/index.tsx" />
+        <option value="$PROJECT_DIR$/sdp-ui/src/store/spot-rates/actions.tsx" />
       </list>
     </option>
   </component>
@@ -460,6 +501,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/ric/node_modules" />
     <handled-path value="$PROJECT_DIR$/sdp-server/node_modules" />
     <handled-path value="$PROJECT_DIR$/sdp-ui/node_modules" />
     <handled-path value="$PROJECT_DIR$/server-api/node_modules" />
@@ -575,75 +617,7 @@
               <item name="sip" type="462c0819:PsiDirectoryNode" />
               <item name="sdp-ui" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sip" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sip" type="462c0819:PsiDirectoryNode" />
-              <item name="sdp-ui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="css-modules-container" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sip" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sip" type="462c0819:PsiDirectoryNode" />
-              <item name="sdp-ui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sip" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sip" type="462c0819:PsiDirectoryNode" />
-              <item name="sdp-ui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-              <item name="local-storage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sip" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sip" type="462c0819:PsiDirectoryNode" />
-              <item name="sdp-ui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="store" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sip" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sip" type="462c0819:PsiDirectoryNode" />
-              <item name="sdp-ui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="currency-rates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sip" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sip" type="462c0819:PsiDirectoryNode" />
-              <item name="sdp-ui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="middleware" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sip" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sip" type="462c0819:PsiDirectoryNode" />
-              <item name="sdp-ui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="spot-rates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sip" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sip" type="462c0819:PsiDirectoryNode" />
-              <item name="sdp-ui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="theme" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sip" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sip" type="462c0819:PsiDirectoryNode" />
-              <item name="sdp-ui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -720,7 +694,7 @@
       <updated>1513674948253</updated>
       <workItem from="1513674950907" duration="1706000" />
       <workItem from="1513683153794" duration="23709000" />
-      <workItem from="1518610394083" duration="15942000" />
+      <workItem from="1518610394083" duration="34791000" />
     </task>
     <servers />
   </component>
@@ -757,7 +731,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41357000" />
+    <option name="totallyTimeSpent" value="60206000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1929" y="-9" width="1938" height="1218" extended-state="6" />
@@ -768,7 +742,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49607843" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36960784" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -801,45 +775,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sdp-ui/src/containers/ticket-container/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="42" column="15" lean-forward="false" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdp-ui/src/services/local-storage/app-store.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdp-ui/src/definitions.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdp-ui/src/containers/tickets-container/components/tickets.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#31#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdp-ui/src/containers/tickets-container/components/tickets.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="2" lean-forward="false" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sdp-ui/jspm.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -883,14 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sdp-ui/src/app.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sdp-ui/jspm_packages/system-polyfills.js.map">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
@@ -912,23 +839,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdp-ui/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="7" column="57" lean-forward="true" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdp-ui/src/containers/tickets-container/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-          <folding>
-            <element signature="e#1#32#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -958,14 +869,6 @@
           <folding>
             <element signature="e#0#37#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdp-ui/src/store/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1085,7 +988,7 @@
         <state relative-caret-position="133">
           <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1154,56 +1057,134 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sdp-ui/package.json">
+    <entry file="file://$PROJECT_DIR$/sdp-ui/src/store/middleware/fetch.middleware.spec.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-245">
-          <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ric/src/api/instrumentService.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114">
-          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        <state relative-caret-position="-133">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ric/src/ricView/ricView.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdp-ui/src/store/middleware/fetch.middleware.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="49" column="16" lean-forward="false" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ric/src/api/instrumentService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state relative-caret-position="171">
+          <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sdp-ui/src/store/middleware/fetch.middleware.spec.tsx">
+    <entry file="file://$PROJECT_DIR$/sdp-ui/src/utils/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="33" column="42" lean-forward="false" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdp-ui/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdp-ui/src/app.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdp-ui/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-38">
+          <caret line="28" column="48" lean-forward="true" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ric/src/ricView/ricView.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdp-ui/node_modules/redux-thunk/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdp-ui/node_modules/redux/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="301" column="16" lean-forward="false" selection-start-line="301" selection-start-column="16" selection-end-line="301" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ric/src/api/instrumentService.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="38" column="31" lean-forward="false" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdp-ui/src/store/static/reducer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdp-ui/src/store/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="e#100#179#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdp-ui/src/store/middleware/fetch.middleware.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="931">
+          <caret line="49" column="32" lean-forward="false" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdp-ui/src/containers/tickets-container/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="895">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <element signature="e#1#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdp-ui/src/store/spot-rates/actions.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>

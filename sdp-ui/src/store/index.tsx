@@ -2,6 +2,7 @@ declare var window: Window & { devToolsExtension: any, __REDUX_DEVTOOLS_EXTENSIO
 import { combineReducers, createStore, compose, applyMiddleware } from 'redux';
 import { routerReducer } from 'react-router-redux';
 import { combineEpics, createEpicMiddleware } from 'redux-observable';
+import thunk from 'redux-thunk';
 
 import {
   default as currencyRatesReducer, State as CurrencyRatesState,
@@ -47,7 +48,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 export const store = createStore(
   rootReducer,
   recoverState(),
-  composeEnhancers(applyMiddleware(epicMiddleware, fetchMiddleware))
+  composeEnhancers(applyMiddleware(epicMiddleware, fetchMiddleware, thunk))
 );
 
 export type Store = { getState: () => RootState, dispatch: Function };
